@@ -5,7 +5,8 @@ function mostrar()
 {
 	/*let nombre = "Jose"; //declaro variable y la inicializo con la cadena de caracteres Jose*/
 	let nombre;
-	nombre = prompt("Ingrese su nombre");
+	nombre = prompt("Ingrese su nombre");// el contenido de lo que ingresa el usuario se guarda en la variable nombre
+	
 	alert(nombre); //muestro el contenido de la variable nombre
 }
 
