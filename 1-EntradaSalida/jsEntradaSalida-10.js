@@ -7,11 +7,15 @@ function mostrarAumento()
 {
 	//Declaro variables
 	let importe;
+	let descuento;
 	let resultado;
 	//traigo del html el valor ingresado por usuario (string) y lo guardo en formato numero
-	importe = parseInt(document.getElementById("txtIdImporte").value);
+	importe = parseFloat(document.getElementById("txtIdImporte").value);
 	//calculo el descuento
-	resultado = importe * 0.75;
+	descuento = importe * 25/100;
+	//aplico el descuento
+	resultado = importe - descuento;
+	resultado = resultado.toFixed(2); //limito el numero de decimales a mostrar (2)
 	//copio el valor de resultado en el elemento del cuadro del html para mostrarlo por pantalla
 	document.getElementById("txtIdResultado").value = resultado;
 }

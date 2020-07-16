@@ -7,14 +7,16 @@ function mostrarAumento()
 {
 	//Declaración de variables
 	let sueldo;
-	let resultado;
-	//tomo el valor del ingresado por html y lo convierto a numero
-	sueldo = parseInt(document.getElementById("txtIdSueldo").value);
+	let aumento; 
+	let nuevoSueldo;
+	//tomo el valor del ingresado por html y lo convierto a numero float, porque los sueldos tienen centavos
+	sueldo = parseFloat(document.getElementById("txtIdSueldo").value);
 	//aplico el aumento y lo guardo en resultado
-	resultado = sueldo * 1.1;
-	/*para mostrar el resultado en el cuadro embebido, debo copiar
-	el contenido de la variable resultado en el valor del elemento de dicho cuadro 
+	aumento = sueldo * 10 / 100; //calculo del % de aumento
+	nuevoSueldo = sueldo + aumento;
+	/*para mostrar el nuevo sueldo en el cuadro embebido, debo copiar
+	el contenido de la variable nuevoSueldo en el valor del elemento de dicho cuadro 
 	del html.*/
-	document.getElementById("txtIdResultado").value = parseInt(resultado);
-	//obs: aplico parseInt a resultado para que se muestre el numero entero y no todos los decimales
+	document.getElementById("txtIdResultado").value = nuevoSueldo;
+	//obs: aplico parseInt a nuevoSueldo para que se muestre el numero entero y no todos los decimales
 }
