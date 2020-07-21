@@ -8,7 +8,7 @@ function mostrar()
 	if (edad==15)
 	{
 	alert("niña bonita");
-	edad=0;//reseteo la variable, sino seguiria mostrando el cartel hasta que ingrese un nuevo número
 	}
-
-}//FIN DE LA FUNCIÓN
+	alert ("Fin de la función");
+	
+}

@@ -10,7 +10,7 @@ function mostrar()
 	//edad<18 && estadocivil != "Soltero" es la condicion buscada
 	if (edad<18 && estadoCivil != "Soltero") //deben cumplirse en simultáneo
 	{
-	alert("Es muy peque�o para NO ser soltero");
+	alert("Es muy pequeno para NO ser soltero");
 	}
 
 }//FIN DE LA FUNCIÓN

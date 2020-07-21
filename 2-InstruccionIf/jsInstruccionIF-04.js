@@ -7,7 +7,7 @@
 	//escribo la condición
 	if (edad >= 13 && edad <=17)// el cartel aparece si se cumplen ambas a la vez (true + true = true)
 	{
-	alert("La persona es adolescente");
+	alert("La persona es adolescente"); //mensaje if true
 	}
-
-}//FIN DE LA FUNCIÓN
+	alert("Fin de la funcion"); //mensaje despues del if
+}

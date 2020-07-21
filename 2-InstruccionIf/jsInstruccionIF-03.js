@@ -7,10 +7,11 @@ function mostrar()
 	//Escribo la condición
 	if (edad >= 18)
 	{
-	alert("La persona es mayor de edad");
+	alert("La persona es mayor de edad"); //condicion condicion true
 	}
 	else
 	{
-	alert("La persona es menor de edad");
+	alert("La persona es menor de edad"); //condicion false
 	}
-}//FIN DE LA FUNCIÓN
+	alert("Fin de la funcion"); //mensaje despues de la condicion
+}
