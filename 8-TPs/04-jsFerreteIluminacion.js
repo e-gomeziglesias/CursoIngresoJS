@@ -10,5 +10,95 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
+ 	//declaro variables
+ 	let cantidad;
+ 	let descuento;
+ 	let precio;
+ 	let precioFinal;
+ 	let marca;
+ 	let codMarca;
+ 	let IIBB;//declaro constante number
+ 	let precioUnitario = parseFloat(35);//declaro constante number
+ 	descuento = parseFloat (1); //inicializo en number descuento
+ 	
+ 	//cargo los datos ingresados por el cuadro de texto
+ 	
+ 	cantidad = document.getElementById("txtIdCtxtIdCantidad").value; 
+ 	marca = document.getElementById("Marca").value;
+ 	if (marca = "ArgentinaLuz") //condición para asignar número a la marca
+ 	{
+ 	  codMarca=1; //argentinaluz
+ 	}
+ 	else if (marca = "FelipeLamparas")
+ 	{
+ 	  codMarca = 2; //felipelamparas
+ 	}
+ 	else 
+ 	{
+ 	  codMarca= 3;//todas las demás marcas
+ 	}
+ 	//descuento mas de 6 unidades
+ 	if (cantidad >= 6)
+ 	{
+ 	  descuento = 50/100;
+ 	}
+ 	else
+ 	{
+	switch (codMarca) 
+	{
+ 	  case 1: //casos argentinaLuz
+ 	    {
+ 	      if (cantidad = 5 )
+ 	      {
+ 	        descuento = descuento + 40/100;
+ 	      }
+ 	      else if (cantidad = 4)
+ 	      {
+ 	        descuento = descuento + 25/100;
+ 	      }
+ 	      else if (cantidad = 3)
+ 	      {
+ 	        descuento = descuento + 15/100;
+ 	      }
+ 	    }
+ 	    break;
+ 	  case 2: //casos FelipeLamparas
+ 	    {
+ 	      if (cantidad = 4)
+ 	      {
+ 	        descuento = descuento + 25/100;
+ 	      }
+ 	      else if (cantidad = 3)
+ 	      {
+ 	        descuento = descuento + 10/100;
+ 	      }
+ 	    }
+ 	    break;
+ 	  case 3: //casos todas las otras marcas
+ 	    {
+ 	      if (cantidad = 5)
+ 	      {
+ 	        descuento = descuento + 30/100;
+ 	      }
+ 	      else if (cantidad = 4)
+ 	      {
+ 	        descuento = descuento + 20/100;
+ 	      }
+ 	      else if (cantidad = 3)
+ 	      {
+ 	        descuento = descuento + 5/100;
+ 	      }
+ 	       
+ 	    }
+ 	    break;
+ 	}
+ 	}
+ 	precio= cantidad * precioUnitario;
+ 	precioFinal = precio - precio * descuento;
+ 	//condición IIBB
+ 	if (precioFinal > 120)
+ 	{
+ 	  IIBB = precioFinal*10/100;
+ 	}
  	
 }
