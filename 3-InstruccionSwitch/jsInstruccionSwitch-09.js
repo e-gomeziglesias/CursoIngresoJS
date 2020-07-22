@@ -39,6 +39,7 @@ switch(destino)
 		}
 	break;
 	case "Ushuaia":
+		switch(estacion)
 		{
 			case "Verano":
 			case "Otoño":
