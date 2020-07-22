@@ -10,5 +10,84 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
+ 	//declaro variables
+ 	let cantidad;
+ 	let descuento;
+ 	let precio;
+ 	let precioFinal;
+ 	let marca;
+ 	let codMarca;
+ 	let IIBB;//declaro constante number
+ 	let precioUnitario = 35;//declaro constante number
+
+	descuento = 0; //inicializo descuento
  	
+ 	//cargo los datos ingresados por el cuadro de texto
+ 	
+ 	cantidad = document.getElementById("txtIdCantidad").value; 
+	 marca = document.getElementById("Marca").value;
+	 
+	if (cantidad >= 6)
+	{
+		descuento = 50/100;
+	}
+	else
+	{
+	switch (marca) 
+	{
+ 	  case "ArgentinaLuz": //casos argentinaLuz
+ 	      if (cantidad == 5 )
+ 	      {
+ 	        descuento = descuento + 40/100;
+ 	      }
+ 	      else if (cantidad == 4)
+ 	      {
+ 	        descuento = descuento + 25/100;
+ 	      }
+ 	      else if (cantidad == 3)
+ 	      {
+ 	        descuento = descuento + 15/100;
+ 	      }
+ 	    break;
+ 	  case "FelipeLamparas": //casos FelipeLamparas
+ 	      if (cantidad == 4)
+ 	      {
+ 	        descuento = descuento + 25/100;
+ 	      }
+ 	      else if (cantidad == 3)
+ 	      {
+ 	        descuento = descuento + 10/100;
+ 	      }
+ 	    break;
+ 	  default: //casos todas las otras marcas
+ 	      if (cantidad == 5)
+ 	      {
+ 	        descuento = descuento + 30/100;
+ 	      }
+ 	      else if (cantidad == 4)
+ 	      {
+ 	        descuento = descuento + 20/100;
+ 	      }
+ 	      else if (cantidad == 3)
+ 	      {
+ 	        descuento = descuento + 5/100;
+ 	      }
+ 	       
+ 	    break;
+	 }
+	}
+ 	precio= cantidad * precioUnitario;
+	precioFinal = precio - precio * descuento;
+ 	//condición IIBB
+ 	if (precioFinal > 120)
+ 	{
+		IIBB = precioFinal*10/100;
+		precioFinal=precioFinal + IIBB;
+		document.getElementById("txtIdprecioDescuento").value = precioFinal.toFixed(2);
+		alert("Usted pago "+IIBB.toFixed(2)+" de Ingresos Brutos.");
+ 	}
+	 else
+	{
+		document.getElementById("txtIdprecioDescuento").value = precioFinal.toFixed(2);
+	}
 }
