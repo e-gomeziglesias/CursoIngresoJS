@@ -27,7 +27,7 @@ switch(estacion)
 		}
 	break;
 	case "Verano":
-		switch(estacion)
+		switch(destino)
 		{
 			case "Mar del plata":
 			case "Cataratas":
@@ -40,7 +40,7 @@ switch(estacion)
 		}
 	break;
 	case "Otoño":
-		switch(estacion)
+		switch(destino)
 		{
 			case "Bariloche":
 			case "Mar del plata":
@@ -51,7 +51,7 @@ switch(estacion)
 		}
 	break;
 	case "Primavera":
-		switch(estacion)
+		switch(destino)
 		{
 			case "Bariloche":
 			  alert("No se viaja.");

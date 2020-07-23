@@ -15,8 +15,9 @@ function CalcularPrecio ()
  	let descuento;
  	let precio;
  	let precioFinal;
- 	let marca;
-	let precioUnitario = 35;
+	let marca;
+	let iibb;
+	const PRECIOUNITARIO = 35;
 
 	//cargo los datos de los cuadros de texto en las variables. Inicializo descuento.
  	cantidad = document.getElementById("txtIdCantidad").value; 
@@ -72,15 +73,17 @@ function CalcularPrecio ()
  	    break;
 	 }
 	}
- 	precio= cantidad * precioUnitario;
+ 	precio= cantidad * PRECIOUNITARIO;
+	 ;
 	precioFinal = precio - precio * descuento;
  	//condición IIBB
  	if (precioFinal > 120)
  	{
-		IIBB = precioFinal*10/100;
-		precioFinal=precioFinal + IIBB;
+		iibb = precioFinal*10/100;
+		
 		document.getElementById("txtIdprecioDescuento").value = precioFinal.toFixed(2);
-		alert("Usted pago "+IIBB.toFixed(2)+" de Ingresos Brutos.");
+		precioFinal=precioFinal + iibb;
+		alert("El importe final es de " +precioFinal+ ". Usted pago "+iibb.toFixed(2)+" de Ingresos Brutos.");
  	}
 	 else
 	{
