@@ -4,15 +4,13 @@ e informar la suma acumulada y el promedio.
 */
 function mostrar()
 {
-	var contador;
-	var acumulador;
-	var respuesta;
-	contador=0;
-	acumulador=0;
-	respuesta='si';
+// declaro variables
+let numero;
+let suma;
+let multiplicacion;
+
+//armo bucle validacion
 
 
-	txtIdSuma.value=acumulador;
-	txtIdPromedio.value=acumulador/contador;
 
 }//FIN DE LA FUNCIÓN

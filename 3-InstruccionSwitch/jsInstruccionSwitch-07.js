@@ -6,8 +6,30 @@ let destino;
 //asigno el valor del cuadro de texto a la variable destino
 destino = document.getElementById("txtIdDestino").value;
 
+//Planteo el if
+
+if (destino=="Bariloche")
+{
+	alert("El destino se encuentra al Oeste.");
+}
+else if(destino=="Cataratas")
+{
+	alert("El destino se encuentra al Norte.")
+}
+else if(destino=="Mar del plata")
+{
+	alert("El destino se encuetra al Este.");
+}
+else if(destino=="Ushuaia")
+{
+	alert("El destino se encuentra al Sur.");
+}
+else
+{
+	alert("El destino no es valido.");
+}
 //planteo el switch
-switch(destino)
+/*switch(destino)
 {
 	case "Bariloche":
 		alert("El destino se encuentra al Oeste.");
@@ -21,6 +43,6 @@ switch(destino)
 	case "Ushuaia":
 		alert("El destino se encuentra al Sur");
 	break;
-}
+}*/
 
 }//FIN DE LA FUNCIÓN

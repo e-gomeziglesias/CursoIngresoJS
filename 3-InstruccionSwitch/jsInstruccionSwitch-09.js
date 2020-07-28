@@ -2,13 +2,13 @@ function mostrar()
 {
 //declaro variables
 let destino;
-let precioBase = 15000;
+const PRECIO_BASE = 15000;
 let descuento;
 let aumento;
 let precioFinal;
 
 // Inicializo descuento y aumento
-descuento =0 ;
+descuento = 0 ;
 aumento = 0 ;
 //asigno el valor del cuadro de texto a la variable destino
 destino = document.getElementById("txtIdDestino").value;
@@ -76,7 +76,7 @@ switch(destino)
 }
 //calculo el precio final
 
-precioFinal = precioBase + precioBase*aumento - precioBase*descuento;
-alert("El precio final de su viaje es de $"+precioFinal);
+precioFinal = PRECIO_BASE + PRECIO_BASE*aumento - PRECIO_BASE*descuento;
+alert("El precio final de su viaje a " +destino+ " en "+estacion+" es de $"+precioFinal);
 
 }//FIN DE LA FUNCIÓN
