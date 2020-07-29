@@ -5,13 +5,13 @@ function mostrar()
 {
 //declaro variables
 
-let contador=10;
+let i=10;
 
 //muestro la iteracion
-while(contador>0)
+while(i>0)
 {
-	alert(contador);
-	contador--;
+	console.log(i);
+	i--;
 }
 
 }//FIN DE LA FUNCIÓN

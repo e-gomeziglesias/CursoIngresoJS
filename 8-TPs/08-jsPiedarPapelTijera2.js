@@ -24,11 +24,11 @@ function piedra()
     {
 		alert("Perdiste.");
 		ContadorDePerdidas++;
-		document.getElementById("txtIdEmpatadas").value = ContadorDeEmpates;
-		document.getElementById("txtIdGanadas").value = ContadorDeGanadas;
-		document.getElementById("txtIdPerdidas").value = ContadorDePerdidas;
     }
 	eleccionMaquina=Math.round(Math.random()*(3-1)+1);
+	document.getElementById("txtIdEmpatadas").value = "Juegos Empatados: " +ContadorDeEmpates;
+	document.getElementById("txtIdGanadas").value = "Juegos Ganados: "+ContadorDeGanadas;
+	document.getElementById("txtIdPerdidas").value = "Juegos Perdidos: " +ContadorDePerdidas;
 	
 }//FIN DE LA FUNCIÓN
 function papel()
@@ -49,9 +49,9 @@ function papel()
 		ContadorDePerdidas++;
     }
 	eleccionMaquina=Math.round(Math.random()*(3-1)+1);
-	document.getElementById("txtIdEmpatadas").value = ContadorDeEmpates;
-	document.getElementById("txtIdGanadas").value = ContadorDeGanadas;
-	document.getElementById("txtIdPerdidas").value = ContadorDePerdidas;
+	document.getElementById("txtIdEmpatadas").value = "Juegos Empatados: " +ContadorDeEmpates;
+	document.getElementById("txtIdGanadas").value = "Juegos Ganados: "+ContadorDeGanadas;
+	document.getElementById("txtIdPerdidas").value = "Juegos Perdidos: " +ContadorDePerdidas;
 
 }//FIN DE LA FUNCIÓN
 function tijera()
@@ -72,9 +72,9 @@ function tijera()
 		ContadorDePerdidas++;
     }
 	eleccionMaquina=Math.round(Math.random()*(3-1)+1);
-	document.getElementById("txtIdEmpatadas").value = ContadorDeEmpates;
-	document.getElementById("txtIdGanadas").value = ContadorDeGanadas;
-	document.getElementById("txtIdPerdidas").value = ContadorDePerdidas;
+	document.getElementById("txtIdEmpatadas").value = "Juegos Empatados: " +ContadorDeEmpates;
+	document.getElementById("txtIdGanadas").value = "Juegos Ganados: "+ContadorDeGanadas;
+	document.getElementById("txtIdPerdidas").value = "Juegos Perdidos: " +ContadorDePerdidas;
 }//FIN DE LA FUNCIÓN  
 
 function mostrarResultado()

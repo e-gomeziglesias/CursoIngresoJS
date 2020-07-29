@@ -4,11 +4,11 @@ con números ASCENDENTE, desde el 1 al 10.*/
 function mostrar()
 {
 //declaro variables
-let contador=1;
+let i=0; // `1)variable de control e 2)inicializacion
 
-while(contador<=10)
+while(i<10)
 {
-	alert(contador)
-	contador++;
+	i++; //3)modificacion de la variable de control
+	console.log(i);
 }
 }//FIN DE LA FUNCIÓN
