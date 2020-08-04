@@ -10,7 +10,10 @@ let sexo;
 
 sexo = prompt("Ingrese 'f' para femenino o 'm' para masculino");
 
-while (!(sexo == "m" || sexo == "f"))
+//dato invalido = sexo distinto a f o m
+//while (sexo != 'm' && sexo != 'f')
+//dato no valido = sexo no igual a f o m
+while (!(sexo == 'm' || sexo == 'f' || sexo == 'F' || sexo =='M'))
 {
 	sexo = prompt("Sexo incorrecto. Ingrese 'f' para femenino o 'm' para masculino");
 }

@@ -2,16 +2,19 @@
 al presionar el botón pedir la CLAVE (ayuda: es utn750)*/
 function mostrar()
 {
-	let claveIngresada; // declaro variables
+	let clave; // declaro variables
 
-	claveIngresada = prompt("Ingrese la clave."); //cargo el valor por ventana emergente
+	clave = prompt("Ingrese la clave."); //cargo el valor por ventana emergente
 	//armo el bucle de validacion de clave
-	while (claveIngresada != "utn750")
+	//while (clave != "utn750") //conndicion verdadera cuando el dato sea invalido
+	//{
+	//clave = prompt("La clave ingresada es INCORRECTA. Ingrese la clave nuevamente.");
+	//}
+	//opcion 2 Dato no valido
+	while ((!(clave=="utn750")))
 	{
-	alert("La clave ingresada es INCORRECTA.");
-	claveIngresada = prompt("Ingrese la clave nuevamente.");
+	clave = prompt("La clave ingresada es INCORRECTA. Ingrese la clave nuevamente.");
 	}
-
 	
 	
 }//FIN DE LA FUNCIÓN

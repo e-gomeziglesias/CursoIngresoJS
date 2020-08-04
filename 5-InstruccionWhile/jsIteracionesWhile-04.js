@@ -11,7 +11,9 @@ let numero;
 numero=parseInt(prompt("Ingrese un numero entre 0 y 9."));
 
 //planteo el bucle
-while (!(numero >= 0 && numero <= 9))
+//opc 1 dato invalido: por debajo del limite inferior o por encima del limite superior o que no sea un numero
+while ((numero < 0 || numero > 9) || isNaN(numero))
+//while (!(numero >= 0 && numero <= 9)) planteo el no valido
 {
 	numero=parseInt(prompt("Numero INCORRECTO. Ingrese un numero entre 0 y 9."));	
 }
