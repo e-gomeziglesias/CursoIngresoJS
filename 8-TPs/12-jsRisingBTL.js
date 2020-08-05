@@ -16,6 +16,8 @@ let estadoCivil;
 let sueldo;
 let legajo;
 let nacionalidad;
+let estadoCivilString;
+let nacionalidadString;
 //Cargo Edad
 edad = prompt("Ingrese su edad, en números. (entre 18 a 90 años");
 //valido Edad entre 18 y 90 inclusive
@@ -24,7 +26,7 @@ while (!(edad >= 18 && edad <= 90)) //me estoy asegurando que tampoco ingrese le
   edad = prompt("La edad ingresada es inválida. Ingrwse su edad usando números, entre 18 y 90.");
 }
 //Cargo Sexo
-sexo = toUpperCase(prompt("Ingrese su sexo. 'F' para femenino, 'M' para masculino."));
+sexo = prompt("Ingrese su sexo. 'F' para femenino, 'M' para masculino.");
   //valido Sexo "M" o "F"
   while (!(sexo == 'M' || sexo == 'F'))
   {
@@ -52,43 +54,45 @@ legajo = parseInt(prompt("Ingrese el número de 4 cifras de su legajo"));
     legajo = parseInt(prompt("El número de legajo ingresado es inválido. Ingrese el número de 4 cifras de su legajo"))
   }
 //cargo nacionalidad
-nacionalidad = toUpperCase(prompt ("Ingrese el estado de su nacionalidad. 'A' para argentinos - 'E' para extranjeros - 'N' para nacionalizados"));
+nacionalidad = prompt ("Ingrese el estado de su nacionalidad. 'A' para argentinos - 'E' para extranjeros - 'N' para nacionalizados");
   //valido nacionalidad (A E N)
   while (!(nacionalidad == 'A' || nacionalidad == 'E' || nacionalidad == 'N'));
   {
-    nacionalidad = toUpperCase(prompt ("El estado de su nacionalidad es inválido. Ingrese el estado de su nacionalidad. 'A' para argentinos - 'E' para extranjeros - 'N' para nacionalizados"));
+    nacionalidad = prompt ("El estado de su nacionalidad es inválido. Ingrese el estado de su nacionalidad. 'A' para argentinos - 'E' para extranjeros - 'N' para nacionalizados");
   }
 //muestro los datos por cuadro de texto.
-= edad;
-= sexo;
+document.getElementById("txtIdEdad").value = edad;
+document.getElementById("txtIdSexo").value = sexo;
+
 switch(estadoCivil)
 {
   case 1:
-    = "Casado";
+    estadoCivilString = "Casado";
   break;
   case 2:
-    = "Soltero";
+    estadoCivilString = "Soltero";
   break;
   case 3:
-    = "Divorciado";
+    estadoCivilString = "Divorciado";
   break;
   case 4:
-    ="Viudo";
+    estadoCivilString ="Viudo";
   break;
 }
-= "$" + sueldo;
-= legajo;
+document.getElementById("txtIdEstadoCivil").value = estadoCivilString;
+document.getElementById("txtIdSueldo").value = "$" + sueldo;
+document.getElementById("txtIdLegajo").value = legajo;
 switch(nacionalidad)
 {
   case 'A':
-    = "Argentino";
+    nacionalidadString = "Argentino";
   break;
   case 'E':
-    = "Extranjero";
+    nacionalidadString = "Extranjero";
   break;
   case 'N':
-    = "Nacionalizado";
+    nacionalidadString = "Nacionalizado";
   break;
-
 }
+document.getElementById("txtIdNacionalidad").value = nacionalidadString;
 }

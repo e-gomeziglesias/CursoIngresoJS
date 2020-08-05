@@ -1,7 +1,4 @@
 function mostrar()
 {
-
-
-	alert("ok");
-
+//ver si tiene dos divisores
 }//FIN DE LA FUNCIÓN
