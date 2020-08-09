@@ -59,6 +59,15 @@ for (let i = 1 ; i <= 5; i++)
 			//contadorAlcohol++;
 			precioAlcohol = precioAlcohol + precio;
 			cantidadAlcohol = cantidadAlcohol + cantidad;
+
+			//A. si alcohol y precio minimo entonces contar cantidad y fabricante
+			if (flagAlcohol == 0 || precio < precioAlcoholBarato)
+			{
+				precioAlcoholBarato = precio;
+				cantidadAlcoholBarato = cantidad;
+				fabricanteAlcoholBarato = fabricante;
+				flagAlcohol = 1;
+			}
 		break;
 		case "barbijo":
 			//contadorBarbijo++;
@@ -71,14 +80,7 @@ for (let i = 1 ; i <= 5; i++)
 			cantidadJabon = cantidadJabon + cantidad;
 		break;
 	}
-	//A. si alcohol y precio minimo entonces contar cantidad y fabricante
-	if (flagAlcohol == 0 || precio < precioAlcoholBarato)
-	{
-		precioAlcoholBarato = precio;
-		cantidadAlcoholBarato = cantidad;
-		fabricanteAlcoholBarato = fabricante;
-		flagAlcohol = 1;
-	}
+
 	//C. si jabon entonces contar cantidad
 }
 	//B. si cantidad por tipo es maxima entonces promedio por compra (precio/cantidad de maximos)
